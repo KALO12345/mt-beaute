@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MT Beauté chez Philo · Salon afro · Paris 3ᵉ</title>
+<meta name="description" content="MT Beauté chez Philo, salon de coiffure afro au 328 rue Saint-Martin, Paris 3ᵉ. Tresses, braids, tissages, perruques et soins des cheveux. Noté 5/5. Ouvert du lundi au samedi, fermé mardi et dimanche." />
+<meta name="theme-color" content="#16100E" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23E5318A'/%3E%3Ctext x='16' y='22' font-size='13' font-family='sans-serif' font-weight='800' fill='%23fff' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="business.business" />
+<meta property="og:title" content="MT Beauté chez Philo · Salon afro · Paris 3ᵉ" />
+<meta property="og:description" content="Tresses, braids, tissages, perruques et soins des cheveux — le salon afro noté 5/5, rue Saint-Martin." />
+<meta property="og:image" content="assets/facade.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="assets/braids.jpg" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Mulish:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"MT Beauté chez Philo","description":"Salon de coiffure afro : tresses, braids, tissages, perruques, soins des cheveux. 328 rue Saint-Martin, Paris 3ᵉ.","image":"assets/facade.jpg","telephone":"+33606809594","address":{"@type":"PostalAddress","streetAddress":"328 Rue Saint-Martin","addressLocality":"Paris","postalCode":"75003","addressCountry":"FR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"13"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"19:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:30","closes":"19:00"}]}</script>
+<style>
+:root{
+  --noir:#16100E; --noir-2:#241A16;
+  --magenta:#E5318A; --magenta-d:#C21F6F; --rose-p:#F9D8E8;
+  --sable:#EFE0D3; --sable-2:#E5D2C0;
+  --dore:#D9A441;
+  --gris:#8A7A70;
+  --line:rgba(22,16,14,.14); --line-i:rgba(239,224,211,.16);
+  --maxw:1240px; --gut:clamp(20px,5vw,44px);
+  --ease:cubic-bezier(.3,.9,.34,1);
+  --ff-d:"Syne",sans-serif; --ff-b:"Mulish",system-ui,sans-serif;
+  /* motif tresse : chevrons entrelacés */
+  --tresse:repeating-linear-gradient(115deg,var(--magenta) 0 9px,transparent 9px 18px),
+           repeating-linear-gradient(65deg,var(--dore) 0 9px,transparent 9px 18px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--sable);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--ff-b);color:var(--noir);background:var(--sable);
+  font-size:17px;line-height:1.64;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{margin:0}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--magenta);color:#fff}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+/* divider tresse */
+.tresse{height:10px;background:var(--tresse);opacity:.9}
+
+/* preloader */
+#pre{position:fixed;inset:0;z-index:9999;background:var(--noir);display:grid;place-items:center;
+  transition:opacity .55s var(--ease),visibility .55s}
+#pre.done{opacity:0;visibility:hidden;pointer-events:none}
+#pre .c{text-align:center}
+#pre .mt{font-family:var(--ff-d);font-weight:800;font-size:clamp(2.4rem,9vw,4.6rem);color:var(--sable);letter-spacing:-.01em}
+#pre .mt i{font-style:normal;color:var(--magenta)}
+#pre .chez{font-size:.85rem;letter-spacing:.4em;text-transform:uppercase;color:var(--dore);font-weight:700}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
+  padding:18px var(--gut);transition:.3s var(--ease)}
+.nav.sc{background:rgba(239,224,211,.94);backdrop-filter:blur(12px);padding:12px var(--gut);box-shadow:0 1px 0 var(--line)}
+.nav .brand{font-family:var(--ff-d);font-weight:800;font-size:1.15rem}
+.nav .brand i{font-style:normal;color:var(--magenta)}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;align-items:center}
+.nav-links a{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:4px 0;border-bottom:2.5px solid transparent;transition:.25s}
+.nav-links a:hover{border-color:var(--magenta)}
+.nav .tel{background:var(--noir);color:var(--sable);padding:11px 22px;border-radius:100px;font-weight:700;font-size:.8rem;transition:.25s var(--ease)}
+.nav .tel:hover{background:var(--magenta)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;width:42px;height:42px;align-items:flex-end;justify-content:center}
+.burger span{width:25px;height:2.5px;background:var(--noir);transition:.3s var(--ease)}
+.burger span:nth-child(2){width:16px}
+.burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mm{position:fixed;inset:0;z-index:190;background:var(--sable);display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--gut);opacity:0;pointer-events:none;transition:.35s var(--ease)}
+.mm.open{opacity:1;pointer-events:auto}
+.mm a{font-family:var(--ff-d);font-weight:800;font-size:clamp(1.9rem,8vw,3rem);padding:13px 0;border-bottom:1px solid var(--line)}
+.mm a:hover{color:var(--magenta)}
+@media(max-width:920px){.nav-links{display:none}.burger{display:flex}.nav .tel{display:none}}
+
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(26px,4vw,56px);align-items:center;
+  max-width:var(--maxw);margin:0 auto;padding:116px var(--gut) 60px;position:relative}
+.hero-txt .note5{display:inline-flex;align-items:center;gap:10px;background:var(--noir);color:var(--sable);
+  border-radius:100px;padding:9px 18px;font-weight:700;font-size:.82rem;margin-bottom:22px}
+.hero-txt .note5 b{color:var(--dore)}
+.hero-txt h1{font-family:var(--ff-d);font-weight:800;font-size:clamp(2.7rem,7.4vw,5.4rem);line-height:.98;letter-spacing:-.02em}
+.hero-txt h1 .m{color:var(--magenta)}
+.hero-txt h1 .chez{display:block;font-size:.36em;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);margin-top:14px}
+.hero-txt .pitch{color:var(--gris);max-width:44ch;margin:22px 0 32px;font-size:1.06rem}
+.hero-txt .pitch b{color:var(--noir)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:16px 30px;border-radius:100px;background:var(--magenta);color:#fff;transition:.22s var(--ease)}
+.btn:hover{background:var(--noir);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--noir);box-shadow:inset 0 0 0 2px var(--noir)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--magenta);color:var(--magenta);background:transparent}
+.hero-img{position:relative;display:grid;place-items:center}
+.hero-img .rond{width:min(100%,440px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:10px solid var(--noir);
+  box-shadow:0 24px 60px rgba(22,16,14,.25)}
+.hero-img .rond img{width:100%;height:100%;object-fit:cover}
+.hero-img .badge{position:absolute;bottom:6%;left:0;background:var(--dore);color:var(--noir);font-family:var(--ff-d);
+  font-weight:700;font-size:.85rem;padding:12px 20px;border-radius:100px;transform:rotate(-5deg);box-shadow:0 8px 24px rgba(22,16,14,.25)}
+@media(max-width:880px){.hero{grid-template-columns:1fr;padding-top:98px;min-height:auto}.hero-img{order:-1}.hero-img .rond{width:min(78%,360px)}}
+
+/* services */
+.sec{padding:clamp(70px,10vw,125px) 0}
+.shead{margin-bottom:clamp(30px,5vw,52px)}
+.shead .k{font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;font-weight:800;color:var(--magenta);display:block;margin-bottom:10px}
+.shead h2{font-family:var(--ff-d);font-weight:800;font-size:clamp(1.9rem,5vw,3.2rem);letter-spacing:-.01em;line-height:1.05}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.5vw,26px)}
+.svc{background:#fff;border-radius:22px;padding:clamp(24px,3.4vw,38px);position:relative;overflow:hidden;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.svc:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(22,16,14,.14)}
+.svc::before{content:"";position:absolute;top:0;left:0;right:0;height:7px;background:var(--tresse)}
+.svc .num{font-family:var(--ff-d);font-weight:800;color:var(--rose-p);font-size:2.6rem;line-height:1;position:absolute;top:18px;right:22px}
+.svc h3{font-family:var(--ff-d);font-weight:800;font-size:clamp(1.2rem,2.6vw,1.55rem);margin-bottom:10px;letter-spacing:-.01em}
+.svc p{margin:0;color:var(--gris);font-size:.97rem;max-width:44ch}
+.svc .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.svc .tags span{background:var(--sable);border-radius:100px;padding:6px 14px;font-size:.78rem;font-weight:700}
+@media(max-width:760px){.services{grid-template-columns:1fr}}
+
+/* philo */
+.philo{background:var(--noir);color:var(--sable)}
+.philo .shead .k{color:var(--dore)}
+.philo .shead h2{color:var(--sable)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:center}
+.pgrid .ph{border-radius:22px;overflow:hidden;position:relative}
+.pgrid .ph img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.pgrid .ph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 2px rgba(239,224,211,.2);border-radius:22px}
+.ptxt p{color:rgba(239,224,211,.78);max-width:52ch}
+.ptxt .gros{font-family:var(--ff-d);font-weight:700;font-size:clamp(1.25rem,2.6vw,1.6rem);color:var(--sable);line-height:1.4;margin-bottom:16px}
+.ptxt .gros i{font-style:normal;color:var(--magenta)}
+.avis{margin-top:28px;display:grid;gap:14px}
+.avis blockquote{margin:0;background:var(--noir-2);border-left:4px solid var(--magenta);border-radius:0 14px 14px 0;
+  padding:16px 20px;font-style:italic;color:rgba(239,224,211,.85);font-size:.95rem}
+.avis blockquote b{display:block;font-style:normal;color:var(--dore);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-top:8px}
+@media(max-width:880px){.pgrid{grid-template-columns:1fr}}
+
+/* infos */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:start}
+.ihor{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(22,16,14,.1)}
+.ihor .hr{display:flex;justify-content:space-between;gap:12px;padding:14px 22px;border-bottom:1px solid var(--line);font-size:.96rem}
+.ihor .hr:last-child{border-bottom:0}
+.ihor .hr b{font-weight:800}
+.ihor .hr .h{font-weight:700}
+.ihor .hr.off{background:var(--sable)}
+.ihor .hr.off .h{color:var(--gris);font-style:italic;font-weight:500}
+.icoords{margin-top:22px;display:grid;gap:9px}
+.icoords a{font-weight:800;border-bottom:2.5px solid var(--magenta)}
+.imap{border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(22,16,14,.1);min-height:380px;height:100%}
+.imap iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(1) contrast(1.03)}
+@media(max-width:880px){.infos-grid{grid-template-columns:1fr}.imap{min-height:300px}}
+
+/* fin */
+.fin{text-align:center;padding:clamp(60px,9vw,105px) var(--gut);background:var(--magenta);color:#fff;position:relative;overflow:hidden}
+.fin::before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:var(--tresse);filter:brightness(1.6)}
+.fin h2{font-family:var(--ff-d);font-weight:800;font-size:clamp(2rem,6vw,3.8rem);line-height:1.02;letter-spacing:-.02em}
+.fin p{color:rgba(255,255,255,.88);max-width:46ch;margin:16px auto 28px}
+.fin .btn{background:#fff;color:var(--magenta)}
+.fin .btn:hover{background:var(--noir);color:#fff}
+
+/* footer */
+footer{background:var(--noir);color:rgba(239,224,211,.7);padding:34px 0;font-size:.9rem}
+footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .fb{font-family:var(--ff-d);font-weight:800;color:var(--sable)}
+footer .fb i{font-style:normal;color:var(--magenta)}
+footer a:hover{color:var(--sable)}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .48s var(--ease),transform .48s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.svc{transition:none}}
+</style>
+</head>
+<body>
+<div id="pre" aria-hidden="true"><div class="c"><div class="mt">MT <i>Beauté</i></div><span class="chez">chez Philo</span></div></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top">MT <i>Beauté</i></a>
+  <nav aria-label="Navigation principale">
+    <ul class="nav-links">
+      <li><a href="#services">Les services</a></li>
+      <li><a href="#philo">Chez Philo</a></li>
+      <li><a href="#infos">Infos</a></li>
+    </ul>
+  </nav>
+  <a class="tel" href="tel:+33606809594">06 06 80 95 94</a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="mm" id="mm">
+  <a href="#services">Les services</a>
+  <a href="#philo">Chez Philo</a>
+  <a href="#infos">Infos</a>
+  <a href="tel:+33606809594">06 06 80 95 94</a>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-txt">
+      <span class="note5 rv">★★★★★ <b>5,0 sur Google</b> — et ce n'est pas un hasard</span>
+      <h1 class="rv d1">Vos cheveux,<br />notre <span class="m">fierté.</span><span class="chez">MT Beauté · chez Philo</span></h1>
+      <p class="pitch rv d2">Tresses fines ou XXL, tissages, perruques, soins profonds : au <b>328 rue Saint-Martin</b>,
+      Philo et son équipe prennent le temps de faire les choses bien — et ça se voit sur chaque tête qui sort du salon.</p>
+      <div class="hero-cta rv d3">
+        <a class="btn" href="tel:+33606809594">Prendre rendez-vous</a>
+        <a class="btn ghost" href="#services">Voir les services</a>
+      </div>
+    </div>
+    <div class="hero-img rv d1">
+      <div class="rond"><img src="assets/braids.jpg" alt="Box braids blondes fraîchement tressées, vues de dessus" fetchpriority="high" /></div>
+      <span class="badge" aria-hidden="true">Tresses · Perruques · Soins</span>
+    </div>
+  </section>
+
+  <div class="tresse" aria-hidden="true"></div>
+
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="shead rv"><span class="k">Le savoir-faire</span><h2>Quatre raisons de pousser<br />la porte rose.</h2></div>
+      <div class="services">
+        <article class="svc rv"><span class="num" aria-hidden="true">01</span><h3>Tresses &amp; braids</h3>
+          <p>Box braids, nattes collées, vanilles, twists — racines nettes, tension maîtrisée, finitions qui durent des semaines.</p>
+          <div class="tags"><span>Box braids</span><span>Nattes collées</span><span>Twists</span></div></article>
+        <article class="svc rv d1"><span class="num" aria-hidden="true">02</span><h3>Tissages &amp; perruques</h3>
+          <p>Pose, ajustement et entretien — les perruques en vitrine donnent le ton : naturel d'abord.</p>
+          <div class="tags"><span>Pose tissage</span><span>Lace wig</span><span>Entretien</span></div></article>
+        <article class="svc rv d2"><span class="num" aria-hidden="true">03</span><h3>Soins des cheveux</h3>
+          <p>C'est écrit sur l'enseigne, c'est le cœur du métier : soins profonds, hydratation, accompagnement du cheveu naturel.</p>
+          <div class="tags"><span>Soin profond</span><span>Hydratation</span><span>Cheveu naturel</span></div></article>
+        <article class="svc rv d3"><span class="num" aria-hidden="true">04</span><h3>Coiffage &amp; défrisage</h3>
+          <p>Brushing, défrisage maîtrisé, coiffures d'événement — on repart prête, pas pressée.</p>
+          <div class="tags"><span>Brushing</span><span>Défrisage</span><span>Événements</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec philo" id="philo">
+    <div class="wrap">
+      <div class="shead rv"><span class="k">La maison</span><h2>« Chez Philo », ce n'est pas<br />qu'une enseigne.</h2></div>
+      <div class="pgrid">
+        <div class="ph rv"><img src="assets/facade.jpg" alt="La façade rose du salon MT Beauté, perruques en vitrine, rue Saint-Martin" loading="lazy" /></div>
+        <div class="ptxt">
+          <p class="gros rv d1">Un salon de quartier où l'on entre pour des tresses
+          et où l'on revient pour <i>l'accueil</i>.</p>
+          <p class="rv d2">À deux pas de la porte Saint-Martin, la façade rose ne triche pas : à l'intérieur,
+          on conseille franchement, on tresse soigneusement, et on traite chaque cliente comme une habituée —
+          dès la première visite. Les 13 avis Google sont unanimes : cinq étoiles, pas une de moins.</p>
+          <div class="avis rv d3">
+            <blockquote>« Un accueil chaleureux, un travail soigné — je ne vais plus nulle part ailleurs. »<b>Les avis Google, en résumé</b></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="infos">
+    <div class="wrap">
+      <div class="shead rv"><span class="k">Infos pratiques</span><h2>On vous attend.</h2></div>
+      <div class="infos-grid">
+        <div>
+          <div class="ihor rv">
+            <div class="hr"><b>Lundi</b><span class="h">10h — 19h30</span></div>
+            <div class="hr off"><b>Mardi</b><span class="h">Fermé</span></div>
+            <div class="hr"><b>Mercredi — Vendredi</b><span class="h">10h — 19h30</span></div>
+            <div class="hr"><b>Samedi</b><span class="h">9h30 — 19h</span></div>
+            <div class="hr off"><b>Dimanche</b><span class="h">Fermé</span></div>
+          </div>
+          <div class="icoords rv d1">
+            <span>328 rue Saint-Martin, 75003 Paris</span>
+            <span>Métro Strasbourg-Saint-Denis ou Arts-et-Métiers</span>
+            <a href="tel:+33606809594">06 06 80 95 94</a>
+            <span style="font-style:italic;color:var(--gris)">Les grandes coiffures se réservent — appelez pour bloquer votre créneau.</span>
+          </div>
+        </div>
+        <div class="imap rv d1">
+          <iframe title="Plan d'accès — MT Beauté, 328 rue Saint-Martin, Paris 3ᵉ" src="https://www.google.com/maps?q=328+Rue+Saint-Martin,+75003+Paris&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fin">
+    <h2 class="rv">Votre prochaine coiffure<br />commence par un appel.</h2>
+    <p class="rv d1">Un créneau, une idée en tête ou juste une question : Philo répond.</p>
+    <a class="btn rv d2" href="tel:+33606809594">06 06 80 95 94</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <span class="fb">MT <i>Beauté</i> · chez Philo</span>
+    <span>328 rue Saint-Martin, Paris 3ᵉ · <a href="tel:+33606809594">06 06 80 95 94</a></span>
+    <span>Fermé mardi &amp; dimanche</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pre = document.getElementById('pre');
+  window.addEventListener('load', function(){ setTimeout(function(){ pre.classList.add('done'); }, 750); });
+  setTimeout(function(){ pre.classList.add('done'); }, 2300);
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('sc', window.scrollY > 30); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger = document.getElementById('burger'), mm = document.getElementById('mm');
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){
+    mm.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+  }); });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
